@@ -1,13 +1,12 @@
 package med.hia.api.Controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import med.hia.api.dto.consultation.ConsultationDTO;
 import med.hia.api.dto.consultation.ConsultationSchedulerDTO;
 import med.hia.api.infra.validations.ValidateConsultationScheduler;
-import med.hia.api.model.Consultation;
 import med.hia.api.services.ConsultationService;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/consultas")
+@SecurityRequirement(name= "bearer-key")
 public class ConsultationController {
 
     @Autowired

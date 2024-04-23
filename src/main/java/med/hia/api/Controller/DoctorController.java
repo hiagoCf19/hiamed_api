@@ -1,5 +1,6 @@
 package med.hia.api.Controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import med.hia.api.dto.Doctor.DataDoctorDTO;
 import med.hia.api.dto.Doctor.DoctorPublicDataDTO;
@@ -18,6 +19,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/medico")
+@SecurityRequirement(name= "bearer-key")
 public class DoctorController {
 
 

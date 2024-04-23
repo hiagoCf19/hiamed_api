@@ -1,6 +1,5 @@
 package med.hia.api.dto.Doctor;
 
-import med.hia.api.dto.Adress.AdressDTO;
 import med.hia.api.model.Adress;
 import med.hia.api.model.Doctor;
 
