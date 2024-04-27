@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.hia.api.dto.consultation.ReasonForCancellationEnum;
 
 import java.time.LocalDateTime;
 
@@ -26,6 +27,12 @@ public class Consultation {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "paciente_id")
     private Patient paciente;
-
     private LocalDateTime data;
+
+    @Column(name = "motivo_cancelamento")
+    @Enumerated(EnumType.STRING)
+    private ReasonForCancellationEnum motivoDoCancelamento;
+    public void cancel(ReasonForCancellationEnum reason) {
+        this.motivoDoCancelamento = reason;
+    }
 }

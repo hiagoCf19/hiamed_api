@@ -23,6 +23,7 @@ public class AuthController {
     @Autowired
     private TokenService tokenService;
 
+   
     @PostMapping
     public ResponseEntity login(@RequestBody @Valid AuthDataDTO data){
 

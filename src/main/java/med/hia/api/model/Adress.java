@@ -10,7 +10,7 @@ import med.hia.api.dto.Adress.AdressDTO;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Adress {
+public class    Adress {
     private String logradouro;
     private String bairro;
     private String cep;
